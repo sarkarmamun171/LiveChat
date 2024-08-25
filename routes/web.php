@@ -16,4 +16,7 @@ use App\Http\Controllers\ChatController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hello', function () {
+    return response('welcome');
+});
 Route::post('/message',[ChatController::class,'message'])->name('message');
